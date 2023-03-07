@@ -1,0 +1,19 @@
+#timeCounter .wrapper  {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    font-size: 30px;
+}
+#timeCounter  {
+    display: flex;
+    align-items: center;    
+}
+.buttonClock  {
+    display: flex;
+    flex-direction: row;
+}
+.buttonClock button  {
+    padding: 5%;
+}

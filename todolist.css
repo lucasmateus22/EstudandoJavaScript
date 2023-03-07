@@ -1,0 +1,90 @@
+:root{
+    /*_____________DarkMode____________*/
+    --Shadow:#646464;
+    --box:#363636;
+    --font:#fff;
+    --body:#272727;
+    --border:rgb(0, 217, 255);
+    /*_____________WhiteMode____________*/
+    --blackk:#0000;
+    --boxWhite: #e6e6e6;
+    --fontWhite: #0000;
+    --bodyWhite: #ffff;
+}
+.todolist{
+    background-color: var(--box);
+}
+#newTaskInput  {
+    width: 95%;
+    padding-left: 5%;
+}
+#box-list-newTask  {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--box);
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+}
+#box-list-newTask button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.4em;
+    width: 40px;
+    height: 20px;
+    border-radius: 5px;
+    height: 30px;
+}
+#outputTask  {
+    overflow: scroll;
+    height: 170px;
+    background-color: var(--box);
+    border-radius: 0 0 5px 5px;
+}
+#outputTask ul  {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    padding: 1%;
+    list-style: none;
+}
+#outputTask  li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #646464;
+    position: relative;
+    padding: 1%;
+    border-radius: 5px;
+    border-bottom:1px solid #646464;
+    margin-bottom: 5%;
+}
+.close  {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    font-size: 1em;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+}
+.close:hover{
+    background-color: black;
+    color: red;
+}
+#outputTask li{
+    animation-name: desliz;
+    animation-duration: .7s;
+}
+@keyframes desliz {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}

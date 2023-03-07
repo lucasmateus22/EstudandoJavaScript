@@ -1,0 +1,139 @@
+:root{
+    /*_____________DarkMode____________*/
+    --Shadow:#646464;
+    --box:#363636;
+    --font:#fff;
+    --body:#272727;
+    --border:rgb(0, 217, 255);
+    --black: #0000;
+    /*_____________WhiteMode____________*/
+    --ShadowWhite:#0000;
+    --boxWhite: #e6e6e6;
+    --fontWhite: #0000;
+    --bodyWhite: #ffff;
+}
+/*___________________________________________________________________*/
+
+html{
+    background-color: #000;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--font);
+    width: 100vw;
+    min-width: 500px;
+    margin: 0;
+    background: rgb(121,121,121);
+    background: linear-gradient(200deg, rgba(121,121,121,1) 0%, rgba(69,69,69,1) 42%, rgba(96,96,96,1) 54%, rgba(0,0,0,1) 100%);
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    width: 100%;
+    background-color: #646464;
+    font-size: 3em;
+    box-shadow: 0 0 10px grey;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 95.5%;
+}
+/*___________________________________________________________________*/
+
+.box-content-js{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 2%;
+    margin: 80px;
+    transition: .7s;
+}
+.box-content-js:hover{
+    z-index: 99;
+    box-shadow: 0 0 10px var(--border),
+                0 0 20px var(--border);
+}
+/*___________________________________________________________________*/
+
+input{
+    outline: none;
+    background-color: var(--box);
+    color: var(--font);
+    border-radius: 5px;
+    border: none;
+    height: 25px;
+    padding-left: 3%;
+    background: rgb(230,230,230);
+    background: linear-gradient(180deg, rgba(230,230,230,0) 0%, rgba(51,51,51,1) 100%);
+}
+input::selection{
+    background-color: var(--border);
+    color: black;
+}
+button{
+    background-color: aqua;
+    color: #000;
+    border: none;
+    margin: 2px;
+    padding: 1%;
+}
+button:hover{
+    background-color: var(--black);
+    color: var(--border);
+    box-shadow: 0 0 3px grey;
+    transition: .3s;
+}
+.linkToTop  {
+    scroll-behavior: smooth;
+    position: fixed;
+    bottom: 2%;
+    left: 2%;
+    text-decoration: none;
+    background-color: var(--boxWhite);
+    color: #000;
+    font-size: 1em;
+    padding: 1%;
+    border-radius: 10px;
+    opacity: .3;
+}
+.linkToTop:hover  {
+    opacity: 1;
+}
+/*___________________________________________________________________*/
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    border-radius: 10px;
+    background-color: #000000;
+}
+::-webkit-scrollbar-thumb  {
+    border-radius: 100px;
+    background-color: var(--border);
+}
+/*___________________________________________________________________*/
+#buttonScroll  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    right: 2%;
+    bottom: 1%;
+    width: 100px;
+    height: 50px;
+}
+/*___________________________________________________________________*/
+.data-hora{
+    font-size: 1.5em;
+}

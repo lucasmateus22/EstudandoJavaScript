@@ -1,0 +1,13 @@
+@media screen and (max-width:1000px){
+    .box-content-js{
+        width: 95%;
+    }
+    input{
+        width: 90%;
+        height: 40px;
+    }
+    #timeCounter{
+        display: flex;
+        flex-direction: column;
+    }
+}

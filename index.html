@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="calculadora.css">
+    <link rel="stylesheet" href="contador.css">
+    <link rel="stylesheet" href="todolist.css">
+    <title>JavaScript</title>
+</head>
+<body>
+    <header>
+        <span id="outdoor">Estudos na prática</span>
+    </header>
+    <main>
+        <button onclick="scrollTopFunc()" id="buttonScroll" ><p>To Top</p> <span id="arrowTop" >&#10097;</span></button>
+        <!--______________________________________________________________________________________-->
+
+        <section class="box-content-js" id="topPoint">
+            <div class="title-box">
+                <h2>Data e hora(do usuário):</h2>
+            </div>
+            <div class="box-content-code">
+                <div class="data-hora">
+                    <span id="data"></span>
+                    <span id="hora"></span>
+                </div>
+            </div>
+        </section>
+        <!--______________________________________________________________________________________-->
+
+        <div class="box-content-js" id="timeCounter">
+            <div class="title-box">
+                <h2>Contador de tempo</h2>
+            </div>
+            <div class="box-content-code wrapper" >
+                    <p><span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>:<span id="tens">00</span></p>
+                    <div class="buttonClock">
+                        <button id="button-start">Start</button>
+                        <button id="button-stop">Stop</button>
+                        <button id="button-reset">Reset</button>
+                    </div>
+            </div>
+        </div>
+        <!--______________________________________________________________________________________-->
+
+        <section class="box-content-js">
+            <div class="title-box">
+                <h2>Contador de caracteres</h2>
+            </div>
+            <div class="box-content-code">
+                <div class="contador-caracteres">
+                    <input type="text" placeholder="Digite algo" id="nome-completo" class="input-entrada">
+                    <button type="button" value="Exibir quantidade" id="btn-exibir-nome">Exibir</button>
+                </div>
+            </div>
+        </section>
+        <!--______________________________________________________________________________________-->
+
+        <section class="box-content-js">
+            <div class="title-box">
+                <h2>Formatador de moeda</h2>
+            </div>
+            <div class="box-content-code">
+                <input type="text" class="input-entrada" onkeyup="formatoCoin(this);" placeholder="Digite a quantia">
+            </div>
+        </section>
+        <!--______________________________________________________________________________________-->
+        <section class="box-content-js" id="calculadoraCompleta">
+            <div class="title-box calc">
+                <h2>Calculadora</h2>
+            </div>
+            <span type="text" id="result" placeholder="0"></span>
+            <div class="box-content-code num-box">
+                <div class="numeros-box">
+                    <button class="numeros" value="0" id="" onclick="insert('0')">0</button>
+                    <button class="numeros" value="1" id="" onclick="insert('1')">1</button>
+                    <button class="numeros" value="2" id="" onclick="insert('2')">2</button>
+                    <button class="numeros" value="3" id="" onclick="insert('3')">3</button>
+                    <button class="numeros" value="4" id="" onclick="insert('4')">4</button>
+                    <button class="numeros" value="5" id="" onclick="insert('5')">5</button>
+                    <button class="numeros" value="6" id="" onclick="insert('6')">6</button>
+                    <button class="numeros" value="7" id="" onclick="insert('7')">7</button>
+                    <button class="numeros" value="8" id="" onclick="insert('8')">8</button>
+                    <button class="numeros" value="9" id="" onclick="insert('9')">9</button>
+                    
+                </div>
+                <div class="operadores-Calculadora-prin">
+                    <button class="numeros" value="." onclick="insert('.')">.</button>
+                    <button value="+" id="soma" onclick="insert('+')">+</button>
+                    <button value="-" id="subtracao" onclick="insert('-')">-</button>
+                    <button value="*" id="multiplicacao" onclick="insert('*')">*</button>
+                    <button value="/" id="divisao" onclick="insert('/')">/</button>
+                    <button id="executar" onclick="calcular()">=</button>
+                    <button value="" id="clear2" onclick="clean()">Limpar</button>
+                </div>
+                    
+            </div>
+        </section>
+        <!--______________________________________________________________________________________-->
+        <section class="box-content-js" id="calculatorSimpl">
+            <div class="title-box">
+                <h2>Calculadora simples:</h2>
+            </div>
+            <div class="box-content-code" id="calculadora-simples">
+                <div class="bloco">
+                    <div class="text">
+                        <input type="text" id="n1" placeholder="1º número"  class="input-entrada">
+                        <input type="text" id="n2" placeholder="2º número"  class="input-entrada">
+                    </div>
+                    <div class="butts-operadores">
+                        <button type="button" value="+" onclick="calculadoraSimples(this)" class="opperator">+</button>
+                        <button type="button" value="-" onclick="calculadoraSimples(this)" class="opperator">-</button>
+                        <button type="button" value="*" onclick="calculadoraSimples(this)" class="opperator">*</button>
+                        <button type="button" value="/" onclick="calculadoraSimples(this)" class="opperator">/</button>
+                        <button type="button" onclick="limparCalcSimples(this)" class="buttonClear" id="clear-Calculadora-Simples">clear</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--______________________________________________________________________________________-->
+        <section class="box-content-js todolist">
+            <div class="title-box">
+                <h2>Todo List</h2>
+            </div>
+            <div class="box-content-code">
+                <div id="box-list-newTask">
+                    <input type="text" placeholder="Task to be done..." id="newTaskInput" maxlength="20">
+                    <button id="push" onclick="addMoreItem()">+</button>
+                </div>
+                <div id="outputTask">
+                    <ul>
+                        
+                    </ul>
+                </div>
+            </div>
+        </section>
+    
+    <a href="#outdoor" class="linkToTop">to top with only css</a>
+    <script src="calcSimples.js"></script>
+    <script src="calculadora.js"></script>
+    <script src="changerTheme.js"></script>
+    <script src="compare.js"></script>
+    <script src="contador.js"></script>
+    <script src="countCaracter.js"></script>
+    <script src="dateUser.js"></script>
+    <script src="form.js"></script>
+    <script src="formatCoin.js"></script>
+    <script src="guiaJS.js"></script>
+    <script src="hourUser.js"></script>
+    <script src="lat.js"></script>
+    <script src="long.js"></script>
+    <script src="reload.js"></script>
+    <script src="scrollTop.js"></script>
+    <script src="ListArray.js"></script>
+    <script src="textArea.js"></script>
+    <script src="TodoList.js"></script>
+</body>
+</html>
